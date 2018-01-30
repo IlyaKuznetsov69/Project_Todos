@@ -10,7 +10,7 @@ let listItemsCounter = 0;
 let listItemsCompleted = 0;
 let listItemsLeft = 0;
 let data = {};
-let filter; 
+let filter;
 listItem.innerHTML = '<div class="view"><input class="toggle" type="checkbox"><label></label><button class="destroy"></button></div>';
 
 document.addEventListener('DOMContentLoaded', loadData);
@@ -56,6 +56,8 @@ function addListItem() {
 	  let input = document.createElement('input');
 	  li.appendChild(input);
 	  input.classList.add('edit');
+	  let toDoListStyle = getComputedStyle(toDoList);
+      input.style.width = parseInt(toDoListStyle.width) - 43 + 'px';
 	  input.value = label.innerHTML;
 	  input.focus();
 	  input.addEventListener('blur', editingElem);

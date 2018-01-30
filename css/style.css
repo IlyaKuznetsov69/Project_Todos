@@ -75,7 +75,7 @@ input[type="checkbox"] {
 	top: -155px;
 	width: 100%;
 	font-size: 100px;
-	font-weight: 100;
+	font-weight: 300;
 	font-style: italic;
 	text-align: center;
 	color: rgba(19, 166, 224, 0.5);
@@ -166,7 +166,6 @@ label[for='toggle-all'] {
 
 .todo-list li.editing .edit {
 	display: block;
-	width: 506px;
 	padding: 13px 17px 12px 17px;
 	margin: 0 0 0 43px;
 }
@@ -361,11 +360,12 @@ html .clear-completed:active {
 
 	.toggle-all {
 		-webkit-transform: rotate(90deg);
-		transform: rotate(90deg);
+		transform: rotate(90deg); 
 		-webkit-appearance: none;
 		appearance: none;
 	}
 }
+
 
 hr {
 	margin: 20px 0;
