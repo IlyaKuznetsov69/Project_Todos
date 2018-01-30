@@ -10,7 +10,7 @@ let listItemsCounter = 0;
 let listItemsCompleted = 0;
 let listItemsLeft = 0;
 let data = {};
-let filter = '.all'; 
+let filter; 
 listItem.innerHTML = '<div class="view"><input class="toggle" type="checkbox"><label></label><button class="destroy"></button></div>';
 
 document.addEventListener('DOMContentLoaded', loadData);
@@ -256,7 +256,11 @@ function loadData() {
 		    }		
 	}
 	filter = localStorage.getItem('filter');
-	document.querySelector('.all').classList.remove('selected'); 
-	document.querySelector(filter).classList.add('selected');
+	document.querySelector('.all').classList.remove('selected');
+    if (filter) {	
+	document.querySelector(filter).classList.add('selected'); 
 	setActiveFilter();
+	} else {
+		document.querySelector('.all').classList.add('selected');
+	    }
 }
