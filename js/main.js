@@ -5,7 +5,7 @@ window.onunload = saveData;
 
 function ToDoList(options) {                                 // Конструктор объекта "Список"
 	this.newToDo = options.newToDo;                          // Методы: добавляет новый "элемент списка" из "Input" в список
-	this.list = options.list;                                //         удаляет завершенные "элементы" при клике "Удалить все завершенные"
+	this.list = options.list;                                //         удаляет завершенные "элементы"  при клике "Удалить все завершенные"
 	this.clearButton = options.clear;
 	
 	this.newToDo.addEventListener('change', this.addListItem.bind(this));
